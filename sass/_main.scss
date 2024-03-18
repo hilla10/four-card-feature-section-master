@@ -1,0 +1,202 @@
+.main {
+    max-width: rem(1106);
+    margin: rem(77) auto;
+
+    @include breakpointDown(tablet) {
+        width: 87%;
+    }
+
+    &__title {
+        width: 40.5%;
+        margin: auto;
+        margin-bottom: rem(70);
+
+        @include breakpointDown(tablet) {
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: rem(36);
+            font-weight: 200;
+            color: $Grayish-Blue;
+
+            @include breakpointDown(tablet) {
+                font-size: rem(30);
+            }
+
+        }
+
+        h2 {
+            font-size: rem(36);
+            font-weight: 700;
+            padding-bottom: rem(13);
+            color: $Very-Dark-Blue;
+            text-align: left;
+
+            @include breakpointDown(tablet) {
+                text-align: center;
+                font-size: rem(30);
+            }
+        }
+
+        p {
+            text-align: center;
+            font-size: rem(15);
+            color: $Grayish-Blue;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: rem(40);
+        text-align: left;
+
+        @include breakpointDown(tablet) {
+            flex-direction: column;
+        }
+
+        .flex-item {
+            position: relative;
+            background: #fff;
+            padding: rem(28) rem(32) rem(48);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            border-radius: rem(10);
+            width: 50%;
+            margin-top: rem(-9);
+
+            @include breakpointDown(tablet) {
+                width: 87%;
+            }
+
+            h3 {
+                font-size: rem(19);
+                color: $Very-Dark-Blue;
+                padding-bottom: rem(10);
+                font-weight: 700;
+            }
+
+            p {
+                font-size: rem(14);
+                color: $Grayish-Blue;
+                padding-bottom: rem(40);
+            }
+
+            .img_container {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+                border-radius: rem(10) rem(10) 0 0;
+
+            }
+
+            &.border-cyan::before {
+                content: '';
+                background: $Cyan;
+            }
+
+            &.border-red::before {
+                content: '';
+                background: $Red;
+            }
+
+            &.border-cyan::before {
+                content: '';
+                background: $Cyan;
+            }
+
+            &.border-blue::before {
+                content: '';
+                background: $Blue;
+            }
+
+            &:nth-child(2) {
+                background: none;
+                box-shadow: none;
+                padding: 0;
+                margin-top: 0;
+
+                &::before {
+                    content: '';
+                    width: 0;
+                    height: 0;
+                }
+            }
+
+            .flex-top {
+                margin-bottom: rem(26);
+
+            }
+
+            .flex-bottom,
+            .flex-top {
+                position: relative;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+                border-radius: rem(10);
+                padding: rem(34) rem(18);
+                width: 100%;
+
+                .img_container {
+                    padding-bottom: 0;
+                }
+
+                h3 {
+                    padding-bottom: rem(15);
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 5px;
+                    border-radius: rem(10) rem(10) 0 0;
+
+                }
+
+            }
+
+            .border-red::before {
+                content: '';
+                background: $Red;
+            }
+
+            .border-orange::before {
+                content: '';
+                background: $Orange;
+            }
+        }
+    }
+}
+
+// Footer
+
+.footer {
+    background: $Very-Dark-Blue;
+    width: 100%;
+    padding: rem(30);
+    text-align: center;
+    color: $Red;
+
+    a {
+        color: $Very-Light-Gray;
+        text-decoration: none;
+        transition: color 0.3s ease-in;
+
+        &:hover {
+            color: $Cyan;
+        }
+    }
+}
